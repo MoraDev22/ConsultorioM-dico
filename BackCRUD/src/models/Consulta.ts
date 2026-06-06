@@ -17,14 +17,20 @@ export class  Appointment {
 
     @ManyToOne(
         () => Doctor,
-        (doctor) => doctor.citas
+        (doctor) => doctor.citas,
+        {
+            nullable : false
+        }
     )
     @JoinColumn({name : "doctorID"})
     doctor : Doctor
 
     @ManyToOne(
         () => Patient,
-        (patient) => patient.citas
+        (patient) => patient.citas,
+        {
+            nullable : false
+        }
     )
     @JoinColumn({name : "patientID"})
     patient : Patient

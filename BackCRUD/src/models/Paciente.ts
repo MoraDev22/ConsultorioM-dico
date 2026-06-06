@@ -35,7 +35,8 @@ export class Patient {
     surname_m : string
 
     @Column({
-        type: "date"
+        type: "date",
+        nullable : true
     })
     birthdayDate : string
 
@@ -53,12 +54,13 @@ export class Patient {
     phone : string
 
     @Column({
-        length: 100
+        length: 100,
     }) 
     email : string
 
     @Column({
-        type : "text"
+        type : "text",
+        nullable : true
     })
     adress : string
 
@@ -69,26 +71,30 @@ export class Patient {
     bloodType : string
 
     @Column({
-        type: "text"
+        type: "text",
+        nullable : false
     })
     allergies : string
 
     @Column({
         type: "decimal" ,
         precision : 5,
-        scale : 2
+        scale : 2,
+        nullable : true
     })
     weight : number
 
     @Column({
         type: "decimal",
         precision: 3,
-        scale: 2
+        scale: 2,
+        nullable : true
     })
     stature : number
 
     @Column({
-        length : 15
+        length : 15,
+        nullable : true
     })
     emergencyContact : string
 

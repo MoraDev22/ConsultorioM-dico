@@ -11,7 +11,7 @@ const AppDataSource = new DataSource({
     password: 'SQL_server1',
     database: 'ConsultorioDB',
     logging: true, //Muestra información en consola de lo que TypeORM esta haciendo, es decir, las consultas sql
-    entities: [Appointment, Doctor, Patient],
+    entities: [Patient, Doctor, Appointment],
     synchronize: false, //Sincroniza automáticamente las entidades con la base de datos
     options: {
         encrypt: false,
